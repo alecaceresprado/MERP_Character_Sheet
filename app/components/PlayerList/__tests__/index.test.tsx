@@ -8,6 +8,17 @@ import configureStore from '../../../configureStore';
 import history from '../../../utils/history';
 import { playerList } from 'mocks';
 
+jest.mock('@material-ui/core/styles', () => ({
+  makeStyles: () => {
+    return () => ({
+      cardGrid: {
+        paddingTop: 0,
+        paddingBottom: 0
+      }
+    })
+  }
+}))
+
 describe('<PlayerList />', () => {
   it('should render the loading indicator when its loading', () => {
     const { container } = render(<PlayerList players={[]} loading />);

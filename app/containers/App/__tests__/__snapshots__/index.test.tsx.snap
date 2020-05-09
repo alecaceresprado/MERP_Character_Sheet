@@ -25,10 +25,9 @@ exports[`<App /> should render and match the snapshot 1`] = `
       path="/features"
     />
     <Route
+      component={[Function]}
       path="/player/:id"
-    >
-      <PlayerDetails />
-    </Route>
+    />
     <Route
       component={[Function]}
     />

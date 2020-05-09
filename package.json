@@ -53,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx lint-staged && npm run typecheck"
+      "pre-commit": "npx lint-staged && npm run typecheck && npm test"
     }
   },
   "resolutions": {
@@ -166,6 +166,7 @@
     "node-plop": "0.25.0",
     "null-loader": "3.0.0",
     "plop": "2.6.0",
+    "pre-commit": "1.2.2",
     "prettier": "2.0.1",
     "react-test-renderer": "16.13.0",
     "redux-devtools-extension": "2.13.8",

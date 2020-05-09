@@ -45,7 +45,7 @@ exports[`<PlayerList /> should render the loading indicator when its loading 1`]
 
 exports[`<PlayerList /> should render the repositories if loading was successful 1`] = `
 <div
-  class="MuiContainer-root makeStyles-cardGrid-1 MuiContainer-maxWidthMd"
+  class="MuiContainer-root MuiContainer-maxWidthMd"
 >
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
@@ -54,15 +54,15 @@ exports[`<PlayerList /> should render the repositories if loading was successful
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
     >
       <div
-        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+        class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
       >
         <div
-          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          class="MuiCardMedia-root"
           style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
           title="Image title"
         />
         <div
-          class="MuiCardContent-root makeStyles-cardContent-115"
+          class="MuiCardContent-root"
         >
           <h2
             class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
@@ -119,15 +119,15 @@ exports[`<PlayerList /> should render the repositories if loading was successful
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
     >
       <div
-        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+        class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
       >
         <div
-          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          class="MuiCardMedia-root"
           style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
           title="Image title"
         />
         <div
-          class="MuiCardContent-root makeStyles-cardContent-115"
+          class="MuiCardContent-root"
         >
           <h2
             class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
@@ -184,15 +184,15 @@ exports[`<PlayerList /> should render the repositories if loading was successful
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
     >
       <div
-        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+        class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
       >
         <div
-          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          class="MuiCardMedia-root"
           style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
           title="Image title"
         />
         <div
-          class="MuiCardContent-root makeStyles-cardContent-115"
+          class="MuiCardContent-root"
         >
           <h2
             class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
@@ -249,15 +249,15 @@ exports[`<PlayerList /> should render the repositories if loading was successful
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
     >
       <div
-        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+        class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
       >
         <div
-          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          class="MuiCardMedia-root"
           style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
           title="Image title"
         />
         <div
-          class="MuiCardContent-root makeStyles-cardContent-115"
+          class="MuiCardContent-root"
         >
           <h2
             class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"

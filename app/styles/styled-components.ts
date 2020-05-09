@@ -12,15 +12,15 @@ export const theme = {
   default: {
     primary: '#fff',
     componentBackground: '#fff',
-    componentBackgroundSecondary: '#fff',
-  },
+    componentBackgroundSecondary: '#fff'
+  }
 };
 const {
   default: styled,
   css,
   createGlobalStyle,
   keyframes,
-  ThemeProvider,
+  ThemeProvider
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<
   IThemeInterface
 >;

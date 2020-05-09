@@ -19,7 +19,7 @@ export interface Props {
 }
 
 const stateSelector = createSelector(makeSelectLocale(), locale => ({
-  locale,
+  locale
 }));
 
 export default function LanguageProvider(props: Props) {

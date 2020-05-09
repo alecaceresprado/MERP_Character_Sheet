@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
+  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8')
 );
 
 module.exports = {
@@ -19,21 +19,22 @@ module.exports = {
     'react',
     'react-hooks',
     'jsx-a11y',
-    '@typescript-eslint',
+    '@typescript-eslint'
   ],
   env: {
     jest: true,
     browser: true,
     node: true,
-    es6: true,
+    es6: true
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     project: './tsconfig.eslint.json',
+    createDefaultProgram: true
   },
   rules: {
     'jsx-no-lambda': 0,
@@ -78,8 +79,8 @@ module.exports = {
       2,
       2,
       {
-        SwitchCase: 1,
-      },
+        SwitchCase: 1
+      }
     ],
     'jsx-a11y/aria-props': 2,
     'jsx-a11y/heading-has-content': 0,
@@ -89,8 +90,8 @@ module.exports = {
         // NOTE: If this error triggers, either disable it or add
         // your custom components, labels and attributes via these options
         // See https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
-        controlComponents: ['Input'],
-      },
+        controlComponents: ['Input']
+      }
     ],
     'jsx-a11y/label-has-for': 0,
     'jsx-a11y/mouse-events-have-key-events': 2,
@@ -118,21 +119,18 @@ module.exports = {
     'react/sort-comp': 0,
     'redux-saga/no-yield-in-race': 2,
     'redux-saga/yield-effects': 2,
-    'require-yield': 0,
+    'require-yield': 0
   },
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx']
     },
     'import/resolver': {
-      webpack: {
-        config: './internals/webpack/webpack.prod.babel.js',
-      },
       typescript: {
-        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-        directory: './tsconfig.json',
-      },
+        alwaysTryTypes: true,
+        directory: './tsconfig.json'
+      }
     },
-    'import/ignore': ['types'], // Weirdly eslint cannot resolve exports in types folder (try removing this later)
-  },
+    'import/ignore': ['types']
+  }
 };

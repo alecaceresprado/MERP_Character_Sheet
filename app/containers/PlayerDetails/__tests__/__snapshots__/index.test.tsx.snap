@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlayerDetails /> should render and match the snapshot 1`] = `
+<div>
+  Player ID: 
+  1
+</div>
+`;

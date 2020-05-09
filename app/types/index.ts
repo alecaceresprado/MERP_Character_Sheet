@@ -3,7 +3,7 @@ import { RouterState } from 'connected-react-router';
 import { Saga } from 'redux-saga';
 import { SagaInjectionModes } from 'redux-injectors';
 
-import { AppState, HomeState, LanguageProviderState } from '../state';
+import { AppState, LanguageProviderState } from '../state';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 export interface InjectedStore extends Store {
@@ -28,7 +28,6 @@ export interface ApplicationRootState {
   readonly router: RouterState;
   readonly global: AppState;
   readonly language: LanguageProviderState;
-  readonly home: HomeState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 
   // for testing purposes

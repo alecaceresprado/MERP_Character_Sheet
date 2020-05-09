@@ -9,26 +9,22 @@ const selectGlobal = (state: ApplicationRootState) => state.global;
 
 const selectRoute = (state: ApplicationRootState) => state.router;
 
-const makeSelectCurrentUser = () =>
-    createSelector(selectGlobal, globalState => globalState.currentUser);
-
 const makeSelectLoading = () =>
-    createSelector(selectGlobal, globalState => globalState.loading);
+  createSelector(selectGlobal, globalState => globalState.loading);
 
 const makeSelectError = () =>
-    createSelector(selectGlobal, globalState => globalState.error);
+  createSelector(selectGlobal, globalState => globalState.error);
 
-const makeSelectRepos = () =>
-    createSelector(selectGlobal, globalState => globalState.userData.repos);
+const makeSelectPlayersSummary = () =>
+  createSelector(selectGlobal, globalState => globalState.players);
 
 const makeSelectLocation = () =>
-    createSelector(selectRoute, routeState => routeState.location);
+  createSelector(selectRoute, routeState => routeState.location);
 
 export {
-    selectGlobal,
-    makeSelectCurrentUser,
-    makeSelectLoading,
-    makeSelectError,
-    makeSelectRepos,
-    makeSelectLocation,
+  selectGlobal,
+  makeSelectLoading,
+  makeSelectError,
+  makeSelectLocation,
+  makeSelectPlayersSummary
 };

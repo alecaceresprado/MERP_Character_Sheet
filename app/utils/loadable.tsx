@@ -5,7 +5,7 @@ interface Props {
 }
 const loadable = <T extends React.ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  { fallback = null }: Props = { fallback: null },
+  { fallback = null }: Props = { fallback: null }
 ) => {
   const LazyComponent = lazy(importFunc);
 

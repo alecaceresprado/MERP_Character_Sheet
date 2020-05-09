@@ -16,7 +16,7 @@ module.exports = options => ({
     publicPath: '/',
 
     // Merge with env dependent settings
-    ...options.output,
+    ...options.output
   },
   optimization: options.optimization,
   module: {
@@ -26,13 +26,13 @@ module.exports = options => ({
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: options.babelQuery,
-        },
+          options: options.babelQuery
+        }
       },
       {
         test: /\.ts(x?)$/, // Transform typescript files with ts-loader
         exclude: /node_modules/,
-        use: options.tsLoaders,
+        use: options.tsLoaders
       },
       {
         // Preprocess our own .css files
@@ -40,17 +40,17 @@ module.exports = options => ({
         // for a list of loaders, see https://webpack.js.org/loaders/#styling
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
         // Preprocess 3rd party .css files located in node_modules
         test: /\.css$/,
         include: /node_modules/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(eot|otf|ttf|woff|woff2)$/,
-        use: 'file-loader',
+        use: 'file-loader'
       },
       {
         test: /\.svg$/,
@@ -60,10 +60,10 @@ module.exports = options => ({
             options: {
               // Inline files smaller than 10 kB
               limit: 10 * 1024,
-              noquotes: true,
-            },
-          },
-        ],
+              noquotes: true
+            }
+          }
+        ]
       },
       {
         test: /\.(jpg|png|gif)$/,
@@ -72,66 +72,66 @@ module.exports = options => ({
             loader: 'url-loader',
             options: {
               // Inline files smaller than 10 kB
-              limit: 10 * 1024,
-            },
+              limit: 10 * 1024
+            }
           },
           {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
-                enabled: false,
+                enabled: false
                 // NOTE: mozjpeg is disabled as it causes errors in some Linux environments
                 // Try enabling it in your environment by switching the config to:
                 // enabled: true,
                 // progressive: true,
               },
               gifsicle: {
-                interlaced: false,
+                interlaced: false
               },
               optipng: {
-                optimizationLevel: 7,
+                optimizationLevel: 7
               },
               pngquant: {
                 quality: '65-90',
-                speed: 4,
-              },
-            },
-          },
-        ],
+                speed: 4
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
+        use: 'html-loader'
       },
       {
         test: /\.(mp4|webm)$/,
         use: {
           loader: 'url-loader',
           options: {
-            limit: 10000,
-          },
-        },
-      },
-    ],
+            limit: 10000
+          }
+        }
+      }
+    ]
   },
   plugins: options.plugins.concat([
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
     // inside your code for any environment checks; Terser will automatically
     // drop any unreachable code.
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development',
+      NODE_ENV: 'development'
     }),
     // Run typescript checker
-    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true })
   ]),
   resolve: {
     modules: ['node_modules', 'app'],
     extensions: ['.js', '.jsx', '.react.js', '.ts', '.tsx'],
     alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
+      'react-dom': '@hot-loader/react-dom'
+    }
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
-  performance: options.performance || {},
+  performance: options.performance || {}
 });

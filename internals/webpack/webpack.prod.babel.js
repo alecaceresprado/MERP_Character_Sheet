@@ -16,7 +16,7 @@ module.exports = require('./webpack.base.babel')({
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {
     filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].chunk.js',
+    chunkFilename: '[name].[chunkhash].chunk.js'
   },
 
   tsLoaders: [
@@ -25,9 +25,9 @@ module.exports = require('./webpack.base.babel')({
       loader: 'ts-loader',
       options: {
         transpileOnly: true, // fork-ts-checker-webpack-plugin is used for type checking
-        logLevel: 'info',
-      },
-    },
+        logLevel: 'info'
+      }
+    }
   ],
 
   optimization: {
@@ -37,17 +37,17 @@ module.exports = require('./webpack.base.babel')({
         terserOptions: {
           warnings: false,
           compress: {
-            comparisons: false,
+            comparisons: false
           },
           parse: {},
           mangle: true,
           output: {
             comments: false,
-            ascii_only: true,
-          },
+            ascii_only: true
+          }
         },
-        sourceMap: true,
-      }),
+        sourceMap: true
+      })
     ],
     nodeEnv: 'production',
     sideEffects: true,
@@ -62,13 +62,13 @@ module.exports = require('./webpack.base.babel')({
           test: /[\\/]node_modules[\\/]/,
           name(module) {
             const packageName = module.context.match(
-              /[\\/]node_modules[\\/](.*?)([\\/]|$)/,
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/
             )[1];
             return `npm.${packageName.replace('@', '')}`;
-          },
-        },
-      },
-    },
+          }
+        }
+      }
+    }
   },
 
   plugins: [
@@ -85,9 +85,9 @@ module.exports = require('./webpack.base.babel')({
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true,
+        minifyURLs: true
       },
-      inject: true,
+      inject: true
     }),
 
     // Put it in the end to capture all the HtmlWebpackPlugin's
@@ -110,18 +110,18 @@ module.exports = require('./webpack.base.babel')({
         // All chunks marked as `additional`, loaded after main section
         // and do not prevent SW to install. Change to `optional` if
         // do not want them to be preloaded at all (cached only when first loaded)
-        additional: ['*.chunk.js'],
+        additional: ['*.chunk.js']
       },
 
       // Removes warning for about `additional` section usage
-      safeToUseOptionalCaches: true,
+      safeToUseOptionalCaches: true
     }),
 
     new CompressionPlugin({
       algorithm: 'gzip',
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
-      minRatio: 0.8,
+      minRatio: 0.8
     }),
 
     new WebpackPwaManifest({
@@ -135,25 +135,25 @@ module.exports = require('./webpack.base.babel')({
       icons: [
         {
           src: path.resolve('app/images/icon-512x512.png'),
-          sizes: [72, 96, 128, 144, 192, 384, 512],
+          sizes: [72, 96, 128, 144, 192, 384, 512]
         },
         {
           src: path.resolve('app/images/icon-512x512.png'),
           sizes: [120, 152, 167, 180],
-          ios: true,
-        },
-      ],
+          ios: true
+        }
+      ]
     }),
 
     new HashedModuleIdsPlugin({
       hashFunction: 'sha256',
       hashDigest: 'hex',
-      hashDigestLength: 20,
-    }),
+      hashDigestLength: 20
+    })
   ],
 
   performance: {
     assetFilter: assetFilename =>
-      !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
-  },
+      !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)
+  }
 });

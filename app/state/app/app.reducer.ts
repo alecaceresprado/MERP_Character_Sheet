@@ -1,57 +1,42 @@
-import { Repo } from 'models/repo.model';
+import { PlayerSummary } from 'models';
 import { AppActionsTypes, AppActionTypes } from './app.actions';
 
 export interface AppState {
   readonly loading: boolean;
   readonly error?: object | boolean;
-  readonly currentUser: string;
-  readonly userData: UserData;
+  readonly players: PlayerSummary[];
 }
 
-export interface UserData {
-  readonly repos?: Repo[];
-}
-
-// The initial state of the App
 export const appInitialState: AppState = {
   loading: false,
   error: false,
-  currentUser: '',
-  userData: {
-    repos: [],
-  },
+  players: []
 };
 
 // Take this container's state (as a slice of root state), this container's actions and return new state
 export function appReducer(
   state: AppState = appInitialState,
-  action: AppActionsTypes,
+  action: AppActionsTypes
 ): AppState {
   switch (action.type) {
-    case AppActionTypes.LOAD_REPOS:
+    case AppActionTypes.LOAD_PLAYERS_SUMMARY:
       return {
-        currentUser: state.currentUser,
+        ...state,
         loading: true,
         error: false,
-        userData: {
-          repos: [],
-        },
+        players: []
       };
-    case AppActionTypes.LOAD_REPOS_SUCCESS:
+    case AppActionTypes.LOAD_PLAYERS_SUMMARY_SUCCESS:
       return {
-        currentUser: action.payload.username,
+        ...state,
         loading: false,
-        error: state.error,
-        userData: {
-          repos: action.payload.repos,
-        },
+        players: action.payload
       };
-    case AppActionTypes.LOAD_REPOS_ERROR:
-      const { error, loading, ...rest } = state;
+    case AppActionTypes.LOAD_PLAYERS_SUMMARY_ERROR:
       return {
+        ...state,
         error: action.payload,
-        loading: false,
-        ...rest,
+        loading: false
       };
     default:
       return state;

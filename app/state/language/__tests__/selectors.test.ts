@@ -5,7 +5,7 @@ describe('selectLanguage', () => {
   it('should select the language state', () => {
     const languageState = {};
     const mockedState: any = {
-      language: languageState,
+      language: languageState
     };
     expect(selectLanguage(mockedState)).toEqual(languageState);
   });

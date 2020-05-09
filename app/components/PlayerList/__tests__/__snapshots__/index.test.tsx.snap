@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlayerList /> should render the loading indicator when its loading 1`] = `
+<div
+  class="sc-bdVaJa kAPAHy"
+>
+  <div
+    class="sc-bwzfXH kHYkBk"
+  />
+  <div
+    class="sc-htpNat jSPapt"
+  />
+  <div
+    class="sc-bxivhb leTqfi"
+  />
+  <div
+    class="sc-ifAKCX lkOVGt"
+  />
+  <div
+    class="sc-EHOje chnvPL"
+  />
+  <div
+    class="sc-bZQynM iqYbZJ"
+  />
+  <div
+    class="sc-gzVnrw CCqTk"
+  />
+  <div
+    class="sc-htoDjs bWxymj"
+  />
+  <div
+    class="sc-dnqmqq ieSRwc"
+  />
+  <div
+    class="sc-iwsKbI cdedUB"
+  />
+  <div
+    class="sc-gZMcBi bhuLmD"
+  />
+  <div
+    class="sc-gqjmRU kpUady"
+  />
+</div>
+`;
+
+exports[`<PlayerList /> should render the repositories if loading was successful 1`] = `
+<div
+  class="MuiContainer-root makeStyles-cardGrid-1 MuiContainer-maxWidthMd"
+>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
+          title="Image title"
+        />
+        <div
+          class="MuiCardContent-root makeStyles-cardContent-115"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            Lothar Picco
+          </h2>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Braided long beard with charms with runes
+          </p>
+        </div>
+        <div
+          class="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/1"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                View
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/1/edit"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                Edit
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
+          title="Image title"
+        />
+        <div
+          class="MuiCardContent-root makeStyles-cardContent-115"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            Lothar Picco
+          </h2>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Braided long beard with charms with runes
+          </p>
+        </div>
+        <div
+          class="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/2"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                View
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/2/edit"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                Edit
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
+          title="Image title"
+        />
+        <div
+          class="MuiCardContent-root makeStyles-cardContent-115"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            Lothar Picco
+          </h2>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Braided long beard with charms with runes
+          </p>
+        </div>
+        <div
+          class="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/3"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                View
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/3/edit"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                Edit
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-113 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiCardMedia-root makeStyles-cardMedia-114"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3JvT2n7sHUoBw9QqyV-KlwYHfKphD4y0thI9k_iJsyeKmWwcZ&usqp=CAU);"
+          title="Image title"
+        />
+        <div
+          class="MuiCardContent-root makeStyles-cardContent-115"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            Lothar Picco
+          </h2>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            Braided long beard with charms with runes
+          </p>
+        </div>
+        <div
+          class="MuiCardActions-root MuiCardActions-spacing"
+        >
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/4"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                View
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+            href="/player/4/edit"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                Edit
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

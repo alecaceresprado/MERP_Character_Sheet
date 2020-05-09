@@ -14,7 +14,7 @@ import { InjectedStore, ApplicationRootState } from 'types';
 
 export default function configureStore(
   initialState: ApplicationRootState | {} = {},
-  history: History,
+  history: History
 ) {
   const reduxSagaMonitorOptions = {};
   const sagaMiddleware = createSagaMiddleware(reduxSagaMonitorOptions);
@@ -29,8 +29,8 @@ export default function configureStore(
     applyMiddleware(...middlewares),
     createInjectorsEnhancer({
       createReducer,
-      runSaga,
-    }),
+      runSaga
+    })
   ];
 
   let enhancer;
@@ -51,7 +51,7 @@ export default function configureStore(
   const store = createStore(
     createReducer(),
     initialState,
-    enhancer,
+    enhancer
   ) as InjectedStore;
 
   // Extensions

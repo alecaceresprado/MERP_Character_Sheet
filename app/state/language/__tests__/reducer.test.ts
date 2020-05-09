@@ -4,7 +4,7 @@ import { LanguageActionTypes } from '../language.actions';
 describe('languageProviderReducer', () => {
   it('returns the initial state', () => {
     expect(languageProviderReducer(undefined, {} as any)).toEqual({
-      locale: 'en',
+      locale: 'en'
     });
   });
 
@@ -12,10 +12,10 @@ describe('languageProviderReducer', () => {
     expect(
       languageProviderReducer(undefined, {
         type: LanguageActionTypes.CHANGE_LOCALE,
-        payload: 'de',
-      }),
+        payload: 'de'
+      })
     ).toEqual({
-      locale: 'de',
+      locale: 'de'
     });
   });
 });

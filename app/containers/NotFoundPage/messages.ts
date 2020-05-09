@@ -5,11 +5,11 @@
  */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'boilerplate.containers.NotFoundPage';
+export const scope = 'merp.NotFoundPage';
 
 export default defineMessages({
   header: {
     id: `${scope}.header`,
-    defaultMessage: 'Page not found.',
-  },
+    defaultMessage: 'Page not found.'
+  }
 });

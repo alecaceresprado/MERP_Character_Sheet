@@ -1,2 +1,2 @@
-export * from './races.enum'
-export * from './objects.enum'
+export * from './races.enum';
+export * from './objects.enum';

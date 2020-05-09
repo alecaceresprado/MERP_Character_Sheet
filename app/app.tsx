@@ -25,7 +25,9 @@ import App from 'containers/App';
 import LanguageProvider from 'containers/LanguageProvider';
 
 // Load the favicon and the .htaccess file
+// eslint-disable-next-line
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
+// eslint-disable-next-line
 import 'file-loader?name=.htaccess!./.htaccess';
 
 import { HelmetProvider } from 'react-helmet-async';
@@ -82,8 +84,8 @@ if (!(window as any).Intl) {
     .then(() =>
       Promise.all([
         import('intl/locale-data/jsonp/en.js'),
-        import('intl/locale-data/jsonp/de.js'),
-      ]),
+        import('intl/locale-data/jsonp/de.js')
+      ])
     )
     .then(() => render(translationMessages))
     .catch(err => {

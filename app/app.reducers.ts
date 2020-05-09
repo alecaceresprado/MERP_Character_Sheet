@@ -16,7 +16,7 @@ export default function createReducer(injectedReducers = {}) {
     global: appReducer,
     language: languageProviderReducer,
     router: connectRouter(history),
-    ...injectedReducers,
+    ...injectedReducers
   });
 
   return rootReducer;

@@ -1,22 +1,19 @@
 import { action, ActionType } from 'typesafe-actions';
 
-import { Repo } from 'models/repo.model';
+import { PlayerSummary } from 'models';
 
 export enum AppActionTypes {
-  LOAD_REPOS = 'boilerplate/App/LOAD_REPOS',
-  LOAD_REPOS_SUCCESS = 'boilerplate/App/LOAD_REPOS_SUCCESS',
-  LOAD_REPOS_ERROR = 'boilerplate/App/LOAD_REPOS_ERROR',
+  LOAD_PLAYERS_SUMMARY = '[APP] Load Players Summary',
+  LOAD_PLAYERS_SUMMARY_SUCCESS = '[APP] Loading Players Summary With Sucess',
+  LOAD_PLAYERS_SUMMARY_ERROR = '[APP] Error While Loading Players Summary'
 }
 
 export const AppActions = {
-  loadRepos: () => action(AppActionTypes.LOAD_REPOS),
-  reposLoaded: (repos: Repo[], username: string) =>
-    action(AppActionTypes.LOAD_REPOS_SUCCESS, {
-      repos: repos,
-      username: username,
-    }),
-  repoLoadingError: (error: object) =>
-    action(AppActionTypes.LOAD_REPOS_ERROR, error),
+  loadPlayersSummary: () => action(AppActionTypes.LOAD_PLAYERS_SUMMARY),
+  playersSummaryLoaded: (players: PlayerSummary[]) =>
+    action(AppActionTypes.LOAD_PLAYERS_SUMMARY_SUCCESS, players),
+  playersSummaryLoadingError: (error: object) =>
+    action(AppActionTypes.LOAD_PLAYERS_SUMMARY_ERROR, error)
 };
 
 export type AppActionsTypes = ActionType<typeof AppActions>;

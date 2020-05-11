@@ -9,7 +9,7 @@ function createWebpackMiddleware(compiler, publicPath) {
     logLevel: 'warn',
     publicPath,
     silent: true,
-    stats: 'errors-only',
+    stats: 'errors-only'
   });
 }
 
@@ -17,7 +17,7 @@ module.exports = function addDevMiddlewares(app, webpackConfig) {
   const compiler = webpack(webpackConfig);
   const middleware = createWebpackMiddleware(
     compiler,
-    webpackConfig.output.publicPath,
+    webpackConfig.output.publicPath
   );
 
   app.use(middleware);
@@ -30,8 +30,20 @@ module.exports = function addDevMiddlewares(app, webpackConfig) {
   app.use(
     '/mock',
     createProxyMiddleware({
-      target: 'https://firebasestorage.googleapis.com/v0/b/fir-e44ef.appspot.com/o/list.mock.json?alt=media&token=854c72b7-5e7e-4e6d-bf3c-3d1f794d8c57',
+      target:
+        'https://firebasestorage.googleapis.com/v0/b/fir-e44ef.appspot.com/o/list.mock.json?alt=media&token=854c72b7-5e7e-4e6d-bf3c-3d1f794d8c57',
+      changeOrigin: true
+    })
+  );
+
+  app.use(
+    '/mockPlayer',
+    createProxyMiddleware({
+      target: 'https://europe-west1-fir-e44ef.cloudfunctions.net/',
       changeOrigin: true,
+      pathRewrite: {
+        '^/mockPlayer': 'api/player/'
+      }
     })
   );
 

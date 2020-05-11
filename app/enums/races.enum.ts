@@ -1,4 +1,6 @@
 export enum RacesEnum {
   DUNEDAIN = 'Dunedain',
-  NORSEMEN = 'Norsemen'
+  NORSEMEN = 'Norsemen',
+  SINDAR_ELF = 'Sindar Elf',
+  MAN = 'Man'
 }

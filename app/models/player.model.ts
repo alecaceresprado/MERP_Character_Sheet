@@ -1,6 +1,7 @@
 import { RacesEnum } from '../enums';
 
 export interface Player {
+  id: number;
   details: PlayerDetails;
   stats: PlayerStats;
   skills: PlayerSkills;
@@ -10,7 +11,7 @@ export interface Player {
 export interface PlayerDetails {
   name: string;
   nickName: string;
-  race: RacesEnum.NORSEMEN;
+  race: RacesEnum;
   height: string;
   weight: string;
   hairColor: string;
@@ -18,8 +19,8 @@ export interface PlayerDetails {
   physicalSpecial: string;
   class: string;
   classId: string;
-  experience: 31751;
-  level: 3;
+  experience: number;
+  level: number;
 }
 
 export interface PlayerStats {

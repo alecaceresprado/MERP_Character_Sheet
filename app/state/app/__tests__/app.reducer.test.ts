@@ -1,6 +1,7 @@
 import { appReducer, AppState, appInitialState } from '../app.reducer';
 import { AppActions } from '../app.actions';
 import { PlayerSummary } from 'models';
+import { characters } from 'mocks';
 
 describe('appReducer', () => {
   let state: AppState;
@@ -44,7 +45,7 @@ describe('appReducer', () => {
     );
   });
 
-  it('should handle the repoLoadingError action correctly', () => {
+  it('should handle the playersSummaryLoadingError action correctly', () => {
     const fixture = {
       msg: 'Not found'
     };
@@ -57,6 +58,36 @@ describe('appReducer', () => {
 
     expect(
       appReducer(state, AppActions.playersSummaryLoadingError(fixture))
+    ).toEqual(expectedResult);
+  });
+
+
+  it('should handle the playerDetailsLoadingError action correctly', () => {
+    const fixture = {
+      msg: 'Not found'
+    };
+
+    const expectedResult = {
+      loading: false,
+      error: fixture,
+      players: []
+    };
+
+    expect(
+      appReducer(state, AppActions.playerDetailsLoadingError(fixture))
+    ).toEqual(expectedResult);
+  });
+
+  it('should handle the playerDetailsLoaded action correctly', () => {
+    const expectedResult = {
+      loading: false,
+      error: false,
+      players: [],
+      player: characters[0]
+    };
+
+    expect(
+      appReducer(state, AppActions.playerDetailsLoaded(characters[0]))
     ).toEqual(expectedResult);
   });
 });
